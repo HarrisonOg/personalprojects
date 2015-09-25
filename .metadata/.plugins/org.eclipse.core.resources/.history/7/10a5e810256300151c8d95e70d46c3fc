@@ -14,10 +14,4 @@ public class LargestTest {
 		assertEquals(9, Largest.largest(arr));
 	}
 
-	@Test
-    public void testOrder() {
-        assertEquals(9, Largest.largest(new int[] {9,8,7}));
-        assertEquals(9, Largest.largest(new int[] {8,9,7}));
-        assertEquals(9, Largest.largest(new int[] {7,8,9}));
-	}
 }
