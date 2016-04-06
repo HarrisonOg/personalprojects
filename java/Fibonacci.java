@@ -19,14 +19,15 @@ public class Fibonacci{
 	//Returns an array of the fibonacci sequence up to that point
 	public int[] getFibNumArray(int n){
 		int x = 0, y = 1, z = 1;
-		int[] result = new int[n];
+		int[] result = new int[n+1];
 		result[0] = 0;
-		for(int i = 0; i < n-1; i++){
+		for(int i = 0; i < n; i++){
 			x = y;
 			y = z;
 			z = x + y;
 			result[i+1] = x;
 		} 
+		
 		return result;
 	}
 	
