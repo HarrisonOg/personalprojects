@@ -11,19 +11,27 @@ public class Tester{
 		System.out.println("******************************************************");
 		System.out.println();
 		
-		//boolean running = true;
-		//while(running){
+		boolean running = true;
+		while(running){
+			System.out.println();
+			System.out.println();
+			System.out.println("******************************************************");
 			System.out.println("Choices: ");
+			System.out.println();
 			System.out.println("             1: Calculate Fibonacci");
 			System.out.println();
 			System.out.println("Select your choice: ");
 		
 			int choice = 0;
+			//this try-catch will make sure that the choice is an int
 			try{
 				choice = Integer.parseInt(keyboard.nextLine());
 			} catch(NumberFormatException e){
+				System.out.println("Not a valid choice");
 				e.printStackTrace();
 			}
+			
+			
 			switch (choice) {
 				case 1: testFib();
 						break;
@@ -31,21 +39,33 @@ public class Tester{
 						break;
 		
 			}
-			// System.out.println();
-// 			System.out.println("Would you like to do another calculation? (y/n)");
-// 			String dump = keyboard.nextLine();
-// 			String input = keyboard.nextLine();
-// 			String ask = input.trim();
-// 			if(ask=="y"||ask=="Y"){
-// 				//yes
-// 			}
-// 			else if(ask=="n"||ask=="N"){
-// 				//no
-// 				running = false;
-// 			}
-		//}
+			String dump = keyboard.nextLine();
+			System.out.println();
+			System.out.println("Would you like to do another calculation? (y/n)");
+ 			String input = keyboard.nextLine();
+ 			System.out.println();
+ 			if(input.equals("y")||input.equals("Y")){
+				//yes
+				//System.out.println("yes");
+			}
+ 			else if(input.equals("n")||input.equals("N")){
+ 				//no
+ 				//System.out.println("no");
+ 				running = false;
+ 			}
+ 			else{
+ 				System.out.println("Sorry, " + input + " is not a correct choice.");
+ 				System.out.println("Calculator starting over from choice");
+ 			}
+		}
 		
 		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println("******************************************************");
 		System.out.println("               Thank you!");
 		System.out.println("******************************************************");
 
@@ -55,6 +75,10 @@ public class Tester{
 	
 	
 	public static void testFib(){
+		System.out.println();
+		System.out.println();
+		System.out.println("                Fibonacci Calculator selected");
+		System.out.println();
 		System.out.println("Enter number n to figure out the nth Fibonacci number: ");
 		int input = keyboard.nextInt();
 		
