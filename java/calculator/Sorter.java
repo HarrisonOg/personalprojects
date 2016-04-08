@@ -25,7 +25,7 @@ public class Sorter{
 	/*
 	Bubble sort in both ascending and descending patterns
 	*/
-	public int[] bubbleSortAscendingOrder(int inputArr[]){
+	public int[] bubbleSortAscendingOrder(int[] inputArr){
 		int temp;
 		this.array = inputArr;
 		for(int i=0; i < array.length-1; i++){
@@ -37,37 +37,37 @@ public class Sorter{
 				}
 			}
 		}
-		private int[] result = array;
+		int[] result = array;
 		array = null;
 		return result;
 		
 	}
 	
-	public int[] bubbleSortDescendingOrder(int inputArr[]){
+	public int[] bubbleSortDescendingOrder(int[] inputArr){
 		int temp;
 		this.array = inputArr;
 		for(int i=0; i < array.length-1; i++){
 			for(int j=1;j < array.length-i;j++){
-				if(array[j-1] < array[j]){
-					temp=array[j-1];
-					array[j-1]=array[j];
-					array[j]=temp;
+				if(array[j-1] > array[j]){
+					temp=array[j];
+					array[j]=array[j-1];
+					array[j-1]=temp;
 				}
 			}
 		}
-		private int[] result = array;
+		int[] result = array;
 		array = null;
 		return result;
 		
 	}
 	
 	
-	public int[] mergeSort(int inputArr[]) {
+	public int[] mergeSort(int[] inputArr) {
         this.array = inputArr;
         this.length = inputArr.length;
         this.tempMergArr = new int[length];
         doMergeSort(0, length - 1);
-        private int[] result = array;
+        int[] result = array;
         array = null;
         
         return result;
